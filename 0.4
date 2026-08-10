@@ -1,8 +1,30 @@
 sequenceDiagram
-  participant browser 
-  participant server
+  participent browser
+  participent server
 
-  browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
   activate server
-  server->>browser: {"message":"note created"}
-  deactivate browser
+  server->>browser: HTML document
+  deactivate server
+
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+  activate server
+  server->>browser: CSS file
+  deactivate server
+
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+  activate server
+  server->>browser: JS file
+  deactivate server
+
+  Note of browser: browser starts executing JS code
+
+  browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+  activate server
+  server->>browser: [{"content":"Wasta goona hoyaa !!","date":"2026-08-09T18:22:56.572Z"},{"content":"booga vooga","date":"2026-08-09T18:36:01.171Z"},{"content":"","date":"2026-08-09T19:07:40.136Z"},{"content":"alO","date":"2026-08-09T19:27:20.588Z"},{"content":"","date":"2026-08-09T19:35:22.444Z"},{"content":"","date":"2026-08-09T19:36:04.089Z"},{"content":"","date":"2026-08-09T19:41:12.606Z"},{"content":"","date":"2026-08-09T20:13:27.967Z"},{"content":"","date":"2026-08-09T20:34:57.434Z"},{"content":"Hola","date":"2026-08-09T20:35:03.458Z"},{"content":"hello","date":"2026-08-09T20:41:12.887Z"},{"content":"hola","date":"2026-08-09T21:19:52.383Z"},{"content":"hola","date":"2026-08-09T21:29:23.297Z"},{"content":"ahola","date":"2026-08-09T21:32:32.025Z"},{"content":"blah","date":"2026-08-09T22:15:04.688Z"},{"content":"new note without the spa","date":"2026-08-09T23:09:42.829Z"},{"content":"new note without the spa","date":"2026-08-09T23:38:22.277Z"},{"content":"new note","date":"2026-08-09T23:39:29.721Z"},{"content":"new note with the spa","date":"2026-08-10T00:19:57.484Z"},{"content":"new note","date":"2026-08-10T00:20:10.637Z"},{"content":"Joi Zubeen Daa","date":"2026-08-10T00:21:25.654Z"},{"content":"dfd","date":"2026-08-10T01:50:07.703Z"},{"content":"dhs","date":"2026-08-10T01:50:30.290Z"},{"content":"czxx","date":"2026-08-10T01:53:04.900Z"},{"content":"rwer","date":"2026-08-10T01:55:22.438Z"},{"content":"Hello","date":"2026-08-10T02:07:31.604Z"},{"content":"Hello","date":"2026-08-10T02:07:43.263Z"},{"content":"Hi","date":"2026-08-10T02:08:04.379Z"},{"content":"What has the world come to...","date":"2026-08-10T02:59:35.982Z"},{"content":"What+has+the+world+come+to...","date":"2026-08-10T03:00:37.103Z"},{"content":"Testing","date":"2026-08-10T04:11:45.310Z"},{"content":"VPK testing","date":"2026-08-10T04:22:40.351Z"},{"content":"FullStackOpen","date":"2026-08-10T04:24:09.707Z"},{"content":"hola","date":"2026-08-10T04:26:03.341Z"},{"content":"try it again","date":"2026-08-10T04:30:52.003Z"},{"content":"FullStackOpen test it again","date":"2026-08-10T05:49:51.902Z"},{"content":"hifad","date":"2026-08-10T05:54:07.005Z"},{"content":"you're cooked dude lmao","date":"2026-08-10T05:55:24.118Z"},{"content":"hhhhhhhhh","date":"2026-08-10T05:57:04.755Z"},{"content":"plö","date":"2026-08-10T05:57:26.515Z"},{"content":"h","date":"2026-08-10T05:59:02.444Z"},{"content":"h","date":"2026-08-10T06:25:37.506Z"},{"content":"hhhh","date":"2026-08-10T06:25:42.657Z"},{"content":"hello","date":"2026-08-10T06:25:49.763Z"},{"content":"test","date":"2026-08-10T06:35:45.736Z"},{"content":"","date":"2026-08-10T07:19:20.124Z"},{"content":"","date":"2026-08-10T07:20:07.723Z"},{"content":"","date":"2026-08-10T07:36:38.391Z"},{"content":"asd","date":"2026-08-10T08:10:38.040Z"},{"content":"adi","date":"2026-08-10T09:07:12.489Z"},{"content":"Full","date":"2026-08-10T09:34:52.383Z"},{"content":"","date":"2026-08-10T09:41:33.469Z"},{"content":"","date":"2026-08-10T10:08:21.593Z"},{"content":"Wasn’t","date":"2026-08-10T10:08:42.715Z"},{"content":"Wasjr ","date":"2026-08-10T10:09:01.451Z"},{"content":"testing","date":"2026-08-10T10:12:54.012Z"},{"content":"lalala","date":"2026-08-10T10:28:11.991Z"},{"content":"VPK testing","date":"2026-08-10T10:33:44.900Z"},{"content":"hi","date":"2026-08-10T10:43:43.993Z"},{"content":"what's it?","date":"2026-08-10T10:52:20.008Z"},{"content":"VPK testing","date":"2026-08-10T11:07:36.273Z"},{"content":"abc","date":"2026-08-10T11:16:30.322Z"},{"content":"","date":"2026-08-10T11:23:31.852Z"},{"content":"fas","date":"2026-08-10T11:24:03.380Z"},{"content":"asfa","date":"2026-08-10T11:24:23.908Z"},{"content":"new item","date":"2026-08-10T11:26:21.275Z"},{"content":"wwasaaaap","date":"2026-08-10T11:35:47.637Z"},{"content":"","date":"2026-08-10T11:38:01.515Z"},{"content":"Hello world!","date":"2026-08-10T11:49:07.627Z"},{"content":"hi","date":"2026-08-10T11:51:21.188Z"},{"content":"afd","date":"2026-08-10T11:51:49.158Z"},{"content":"Matthew was here","date":"2026-08-10T11:56:06.702Z"},{"content":"Hello","date":"2026-08-10T11:56:18.130Z"},{"content":"hi","date":"2026-08-10T12:04:15.297Z"},{"content":"hello","date":"2026-08-10T12:05:03.491Z"},{"content":"a notable note","date":"2026-08-10T12:11:40.264Z"},{"content":"test","date":"2026-08-10T12:21:38.666Z"},{"content":"","date":"2026-08-10T12:28:07.069Z"},{"content":"delhi","date":"2026-08-10T12:36:14.796Z"},{"content":"hehe","date":"2026-08-10T12:55:16.032Z"},{"content":"try","date":"2026-08-10T12:55:26.084Z"},{"content":"<h1>test</h1>","date":"2026-08-10T12:56:05.702Z"},{"content":"","date":"2026-08-10T13:07:45.036Z"},{"content":"hola","date":"2026-08-10T13:07:48.641Z"},{"content":"hola","date":"2026-08-10T13:07:59.427Z"},{"content":"Let's go","date":"2026-08-10T13:20:22.839Z"},{"content":"","date":"2026-08-10T13:23:26.529Z"},{"content":"","date":"2026-08-10T13:23:28.238Z"},{"content":"hola","date":"2026-08-10T13:25:06.388Z"},{"content":"","date":"2026-08-10T13:25:06.181Z"},{"content":"NULL","date":"2026-08-10T13:57:06.087Z"},{"content":"tortillia","date":"2026-08-10T13:58:50.594Z"},{"content":"111","date":"2026-08-10T14:16:56.566Z"},{"content":"nb","date":"2026-08-10T14:17:17.111Z"},{"content":"j","date":"2026-08-10T14:24:03.945Z"},{"content":"tortillia","date":"2026-08-10T14:36:25.093Z"},{"content":";-- ciao","date":"2026-08-10T14:52:12.314Z"},{"content":"Sticky M.A - Atrás","date":"2026-08-10T14:52:24.015Z"},{"content":"EmptyStackOpen","date":"2026-08-10T15:05:38.677Z"},{"content":"GD","date":"2026-08-10T15:14:33.322Z"}]
+  deactivate server
+
+  Note of browser: exectues the callback function
+
+  
+  
